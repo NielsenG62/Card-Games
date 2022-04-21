@@ -1,4 +1,24 @@
 body {
   background-color: rgb(2, 50, 2);
   color: white;
+  text-align: center;
+  margin-top: 3em;
+}
+.high-low {
+  display: none;
+}
+#draw {
+  display: none;
+}
+#select-game {
+  display: none;
+  position: absolute;
+  right: 3em;
+}
+#deal {
+  display: none;
+}
+
+#player1 {
+  margin-bottom: 2em;
 }

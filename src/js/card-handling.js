@@ -1,4 +1,4 @@
-export default class CardHandling {
+export class CardHandling {
   constructor(id) {
     this.id = id;
   }
@@ -18,10 +18,10 @@ export default class CardHandling {
     });
   }
 
-  static async drawCard(id) {
+  static async drawCard(id, count) {
     try {
       const response = await fetch(
-        `http://deckofcardsapi.com/api/deck/${id}/draw/?count=1`
+        `http://deckofcardsapi.com/api/deck/${id}/draw/?count=${count}`
       );
       if (!response.ok) {
         throw Error(response.statusText);
@@ -32,10 +32,10 @@ export default class CardHandling {
     }
   }
 
-  static async returnCards(id) {
+  static async shuffleCards(id) {
     try {
       const response = await fetch(
-        `http://deckofcardsapi.com/api/deck/${id}/return`
+        `http://deckofcardsapi.com/api/deck/${id}/shuffle`
       );
       if (!response.ok) {
         throw Error(response.statusText);
